@@ -10,6 +10,7 @@
         @catData="$_catData"
         @catStateMachineData="$_catStateMachineData"
         @catStateEventData="$_catStateEventData"
+        @renderData="$_renderData"
     ></Control>
     <!-- 节点面板 -->
     <NodePanel v-if="lf" :lf="lf" :nodeList="nodeList"></NodePanel>
@@ -165,6 +166,11 @@ export default {
     },
     $_render() {
       this.lf.render(demoData)
+      this.$_LfEvent()
+    },
+    $_renderData(data) {
+      console.log(data)
+      this.lf.render(data)
       this.$_LfEvent()
     },
     $_getData() {

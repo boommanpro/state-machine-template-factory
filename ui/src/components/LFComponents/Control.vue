@@ -3,6 +3,7 @@
     <el-button-group>
       <!--      <el-button type="default" size="small" @click="stateListTable = true">查看状态列表</el-button>-->
       <!--      <el-button type="default" size="small" @click="">查看事件列表</el-button>-->
+      <el-button type="default" size="small" @click="inputDataShow = true">导入数据</el-button>
       <el-button type="default" size="small" @click="$_zoomIn">放大</el-button>
       <el-button type="default" size="small" @click="$_zoomOut">缩小</el-button>
       <el-button type="default" size="small" @click="$_zoomReset">大小适应</el-button>
@@ -20,6 +21,11 @@
 
     <el-dialog v-model="stateListTable" title="状态列表" width="800">
       <StateManagement :state-list="stateList"/>
+    </el-dialog>
+
+    <el-dialog v-model="inputDataShow" title="导入数据" width="800">
+        <el-input v-model="inputData" type="textarea" placeholder="请导入原始数据"     rows="30"></el-input>
+      <el-button @click="$_renderData">保存</el-button>
     </el-dialog>
 
   </div>
@@ -41,7 +47,9 @@ export default {
       redoDisable: true,
       graphData: null,
       dataVisible: false,
-      stateListTable: false
+      stateListTable: false,
+      inputDataShow: false,
+      inputData: '',
     }
   },
   mounted() {
@@ -88,6 +96,12 @@ export default {
     $_showMiniMap() {
       const {lf} = this.$props;
       lf.extension.miniMap.show(lf.graphModel.width - 150, 40)
+    },
+    $_renderData() {
+      let result = JSON.parse(this.inputData) || {};
+      this.$emit('renderData', result);
+      this.inputDataShow = false;
+      this.inputData = '';
     }
   }
 }
