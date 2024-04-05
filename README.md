@@ -29,7 +29,7 @@
 在线地址 [state-machine-template-factory](https://boommanpro.github.io/state-machine-template-factory/) 托管在githubPages
 页面截图示例:
 
-![img](https://raw.githubusercontent.com/BoomManPro/state-machine-template-factory/master/docs/front.png)
+![img](https://raw.githubusercontent.com/BoomManPro/state-machine-template-factory/main/docs/front.png)
 
 ## UI
 
