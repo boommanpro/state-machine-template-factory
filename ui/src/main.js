@@ -4,7 +4,7 @@ import App from './App.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import LF from "./components/LF.vue";
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 
@@ -16,7 +16,6 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 // 我们后面再讨论嵌套路由。
 const routes = [
     { path: '/', component: LF },
-    { path: '/about', component: LF },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
@@ -24,7 +23,7 @@ const routes = [
 // 暂时保持简单
 const router = createRouter({
     // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes, // `routes: routes` 的缩写
 })
 const app = createApp(App)
