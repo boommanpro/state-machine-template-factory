@@ -1,0 +1,17 @@
+[
+  {
+    "from": "START",
+    "to": "CREATE",
+    "event": "INIT"
+  },
+  {
+    "from": "CREATE",
+    "to": "APPROVE",
+    "event": "NEXT"
+  },
+  {
+    "from": "APPROVE",
+    "to": "END",
+    "event": "FINISHED"
+  }
+]
