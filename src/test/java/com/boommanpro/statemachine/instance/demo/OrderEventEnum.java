@@ -1,5 +1,8 @@
 package com.boommanpro.statemachine.instance.demo;
 
+import lombok.Getter;
+
+@Getter
 public enum OrderEventEnum {
     INIT("初始化", "INIT"),
     NEXT("继续", "NEXT"),
@@ -13,13 +16,7 @@ public enum OrderEventEnum {
         this.code = code;
     }
 
-    public String getText() {
-        return text;
-    }
 
-    public String getCode() {
-        return code;
-    }
 
     public static OrderEventEnum fromCode(String code) {
         for (OrderEventEnum event : values()) {
@@ -28,5 +25,10 @@ public enum OrderEventEnum {
             }
         }
         throw new IllegalArgumentException("Invalid order event code: " + code);
+    }
+
+    @Override
+    public String toString() {
+        return this.text;
     }
 }

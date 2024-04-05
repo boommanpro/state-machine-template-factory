@@ -13,5 +13,6 @@ public class OrderSateMachineTest {
         StateMachine<OrderStateEnum, OrderEventEnum, OrderStateMachineContext> stateMachine = OrderStateMachineBuilder.build("demo");
         OrderStateEnum orderStateEnum = stateMachine.fireEvent(OrderStateEnum.START, OrderEventEnum.INIT, new OrderStateMachineContext());
         Assert.assertEquals(orderStateEnum, OrderStateEnum.CREATE);
+        System.out.println(stateMachine.generatePlantUML());
     }
 }

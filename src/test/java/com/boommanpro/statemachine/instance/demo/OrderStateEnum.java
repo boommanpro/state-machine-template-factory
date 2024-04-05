@@ -27,4 +27,9 @@ public enum OrderStateEnum {
         }
         throw new IllegalArgumentException("Invalid order state code: " + code);
     }
+
+    @Override
+    public String toString() {
+        return this.text;
+    }
 }
