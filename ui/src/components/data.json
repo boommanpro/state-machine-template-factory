@@ -1,0 +1,165 @@
+{
+  "nodes": [
+    {
+      "id": "9278996d-b8aa-41ff-84a9-e99f56fcfce7",
+      "type": "start",
+      "x": 220,
+      "y": 360,
+      "properties": {
+        "text": "开始",
+        "code": "START"
+      },
+      "text": {
+        "x": 220,
+        "y": 395,
+        "value": "开始"
+      }
+    },
+    {
+      "id": "bb4c3b10-a14a-409a-acf2-df311602f451",
+      "type": "end",
+      "x": 820,
+      "y": 360,
+      "properties": {
+        "text": "结束",
+        "code": "END"
+      },
+      "text": {
+        "x": 820,
+        "y": 395,
+        "value": "结束"
+      }
+    },
+    {
+      "id": "60814376-388b-462d-8c62-7e392a13c53b",
+      "type": "rect",
+      "x": 400,
+      "y": 360,
+      "properties": {
+        "text": "创建",
+        "code": "CREATE"
+      },
+      "text": {
+        "x": 400,
+        "y": 360,
+        "value": "创建"
+      }
+    },
+    {
+      "id": "45e1db41-4921-4137-ada6-73d9c04edf4b",
+      "type": "rect",
+      "x": 630,
+      "y": 360,
+      "properties": {
+        "text": "审批",
+        "code": "APPROVE"
+      },
+      "text": {
+        "x": 630,
+        "y": 360,
+        "value": "审批"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "ebf30abe-6830-47b4-a63e-5854acc84826",
+      "type": "polyline",
+      "sourceNodeId": "9278996d-b8aa-41ff-84a9-e99f56fcfce7",
+      "targetNodeId": "60814376-388b-462d-8c62-7e392a13c53b",
+      "startPoint": {
+        "x": 240,
+        "y": 360
+      },
+      "endPoint": {
+        "x": 350,
+        "y": 360
+      },
+      "properties": {
+        "text": "初始化",
+        "code": "INIT"
+      },
+      "text": {
+        "x": 295,
+        "y": 360,
+        "value": "初始化"
+      },
+      "pointsList": [
+        {
+          "x": 240,
+          "y": 360
+        },
+        {
+          "x": 350,
+          "y": 360
+        }
+      ]
+    },
+    {
+      "id": "deb047a3-ee7c-4a8b-896a-6c5e23888077",
+      "type": "polyline",
+      "sourceNodeId": "60814376-388b-462d-8c62-7e392a13c53b",
+      "targetNodeId": "45e1db41-4921-4137-ada6-73d9c04edf4b",
+      "startPoint": {
+        "x": 450,
+        "y": 360
+      },
+      "endPoint": {
+        "x": 580,
+        "y": 360
+      },
+      "properties": {
+        "text": "继续",
+        "code": "NEXT"
+      },
+      "text": {
+        "x": 515,
+        "y": 360,
+        "value": "继续"
+      },
+      "pointsList": [
+        {
+          "x": 450,
+          "y": 360
+        },
+        {
+          "x": 580,
+          "y": 360
+        }
+      ]
+    },
+    {
+      "id": "17d58012-8b50-43e4-ad6a-5379bbfc61f1",
+      "type": "polyline",
+      "sourceNodeId": "45e1db41-4921-4137-ada6-73d9c04edf4b",
+      "targetNodeId": "bb4c3b10-a14a-409a-acf2-df311602f451",
+      "startPoint": {
+        "x": 680,
+        "y": 360
+      },
+      "endPoint": {
+        "x": 800,
+        "y": 360
+      },
+      "properties": {
+        "text": "停止",
+        "code": "FINISHED"
+      },
+      "text": {
+        "x": 740,
+        "y": 360,
+        "value": "停止"
+      },
+      "pointsList": [
+        {
+          "x": 680,
+          "y": 360
+        },
+        {
+          "x": 800,
+          "y": 360
+        }
+      ]
+    }
+  ]
+}
